@@ -1,5 +1,5 @@
 todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
-
+  // $scope.tests = [{text: 'hi'}, {text:'world'}];
   $scope.todos = [];
   // $scope.isEditable = [];
 
@@ -10,7 +10,11 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.search = function() {
    console.log('inside search')
    todosFactory.getTodos().then(function(data) {
-    console.log(data);
+    var sales = data.data.results.Sales
+    // console.log(data.data.results.Sales[0].deal.text);
+    for (var i = 0; i < sales.length; i++) {
+      $scope.todos.push(sales[i].deal)
+    };
    })
   };
   // todosFactory.getTodos();

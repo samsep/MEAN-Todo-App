@@ -5,7 +5,6 @@
   var router = express.Router();
   var mongojs = require('mongojs');
   var db = mongojs('meanTodo', ['todos']);
-  var app = require('../app.js');
   var request = require("request");
 
   /* GET home page. */
@@ -17,7 +16,7 @@
     // db.todos.find(function(err, data) {
     //   res.json(data);
     // });
-    console.log('inside api/todos');
+    // console.log('inside api/todos');
     request("https://www.kimonolabs.com/api/99bi2zyc?apikey=J4e2htUUqYIGn97d2bKU9L0DDxCs1Tns", 
       function(err, response, body) {
         if (err) {

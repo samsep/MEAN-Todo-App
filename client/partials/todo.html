@@ -2,16 +2,13 @@
     <div class="row col-md-12">
         <div>
            <form name="deals">
-               <input class="text" type="text" style="display:inline;">
+               <input class="text" type="text" style="display:block;" name="search">
                <button ng-click="search()">Search</button>
            </form>
         </div>
     </div>
-    <div class="row col-md-12 todos">
-        <div class="alert alert-info text-center" ng-hide="todos.length > 0">
-            <h3>Agora</h3>
+        <a ng-repeat="todo in todos" href={{todo.href}} style="display:block;">{{todo.text}} </a></div>
         </div>
-        <div ng-repeat="todo in todos" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <!-- <div class="col-md-1 col-sm-1 col-xs-1">
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
             </div>
@@ -25,6 +22,4 @@
                 <input type="button" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
             </div> -->
 
-        </div>
-    </div>
 </div>
