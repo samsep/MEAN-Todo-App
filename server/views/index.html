@@ -16,11 +16,18 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>Agora</h1>
-    <a href='/'>Apparel</a>
-    <a href='/#/electronics'>Electronics</a>
-    <a href='/#/household'>Household</a>
+ 
+  <div class="container-fluid">
+    <div class="row" style="background-color: #800033">
+    <h1 class="text-center" style="font-size: 60px; color: white">Agora</h1>
+    <h2 class="text-center">Your Central Marketplace</h2>
+    </div>
+  </div>
+    <nav>
+    <a href='/' class="text-center">Apparel</a>
+    <a href='/#/electronics' class="text-center">Electronics</a>
+    <a href='/#/household' class="text-center">Household</a>
+  </nav>
     <hr/>
     <div ng-view></div>
   </div>
