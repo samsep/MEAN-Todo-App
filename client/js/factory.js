@@ -1,6 +1,7 @@
 
 todoApp.factory('todosFactory', function($http) {
   var urlBase = '/api/todos';
+  var urlElecs = '/api/todosElecs'
   var _todoService = {};
  
   _todoService.getTodos = function() {
@@ -8,6 +9,10 @@ todoApp.factory('todosFactory', function($http) {
     return $http.get(urlBase);
   };
 
+  _todoService.getTodosElecs = function() {
+    console.log('inside todosElecs')
+    return $http.get(urlElecs);
+  };
 
   // _todoService.saveTodo = function(todo) {
   //   return $http.post(urlBase, todo);
@@ -20,6 +25,7 @@ todoApp.factory('todosFactory', function($http) {
   _todoService.deleteTodo = function(id) {
     return $http.delete(urlBase + '/' + id);
   };
-  console.log(_todoService)
+
   return _todoService;
 });
+

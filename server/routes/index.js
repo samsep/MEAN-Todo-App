@@ -27,6 +27,20 @@
     });
   });
 
+  router.get('/api/todosElecs', function(req, res) {
+    // db.todos.find(function(err, data) {
+    //   res.json(data);
+    // });
+    // console.log('inside api/todos');
+    request("https://www.kimonolabs.com/api/2rp4jbkw?apikey=J4e2htUUqYIGn97d2bKU9L0DDxCs1Tns", 
+      function(err, response, body) {
+        if (err) {
+          console.log('error occurred')
+        }
+      res.send(body);
+    });
+  });
+
   router.post('/api/todos', function(req, res) {
     db.todos.insert(req.body, function(err, data) {
       res.json(data);
