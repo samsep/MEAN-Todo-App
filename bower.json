@@ -1,7 +1,7 @@
 {
-  "name": "TodoApp",
+  "name": "Agora",
   "version": "0.1.0",
-  "description": "A MEAN stack Todo App",
+  "description": "Your Central Marketplace",
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",

@@ -9,6 +9,10 @@ todoApp = angular.module('todoApp', ['ngRoute'])
         templateUrl: '/partials/electronics.html',
         controller: 'electronicsCtrl'
       })
+      .when('/household', {
+        templateUrl: '/partials/household.html',
+        controller: 'houseCtrl'
+      })
 
       // .otherwise({
       //   redirectTo: '/'
