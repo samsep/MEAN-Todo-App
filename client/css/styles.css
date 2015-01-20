@@ -76,11 +76,15 @@ form {
   width: 100%;
 }
 
-a {
+.toplink{
     margin: auto !important;
+    padding: 20px;
+    font-size: 30px;
 }
 
-button {
-    margin: auto !important;
+nav {
+  text-align: center;
+  margin: 20px 0;
+  padding: 10px;
 }
 
