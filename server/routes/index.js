@@ -10,6 +10,7 @@
   /* GET home page. */
   router.get('/', function(req, res) {
     res.render('index');
+    
   });
 
   router.get('/api/todos', function(req, res) {

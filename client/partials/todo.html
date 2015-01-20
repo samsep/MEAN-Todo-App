@@ -1,13 +1,13 @@
 <div class="container" ng-controller="TodoCtrl">
     <div class="row col-md-12">
         <div>
-           <form name="deals">
-               <input class="text" type="text" style="display:block;" name="search">
+           <form name="deals" style="display:block">
+               <input class="text" type="text" style="display:block;" name="searched" ng-model="searched" placeholder="Search Your Favorite Store" ng-keypress="search()">
                <button ng-click="search()">Search</button>
            </form>
         </div>
     </div>
-        <a ng-repeat="todo in todos" href={{todo.href}} style="display:block;">{{todo.text}} </a></div>
+        <a ng-repeat="todo in todos | filter:searched" href={{todo.href}} style="display:block;">{{todo.text}} </a></div>
         </div>
             <!-- <div class="col-md-1 col-sm-1 col-xs-1">
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">

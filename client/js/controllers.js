@@ -7,7 +7,10 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   // todosFactory.getTodos().then(function(data) {
   //   $scope.todos = data.data;
   // });
+  $scope.doneSearch = false;
   $scope.search = function() {
+  if (!$scope.doneSearch) {
+    $scope.doneSearch = true;
    console.log('inside search')
    todosFactory.getTodos().then(function(data) {
     var sales = data.data.results.Sales
@@ -16,6 +19,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
       $scope.todos.push(sales[i].deal)
     };
    })
+  }
   };
   // todosFactory.getTodos();
   // .then(function(data) {
