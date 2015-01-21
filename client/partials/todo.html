@@ -8,7 +8,8 @@
            </form>
         </div>
     </div>
-        <a ng-repeat="todo in todos | filter:searched" href={{todo.href}} class="text-center" style="display:block;">{{todo.text}} </a></div>
+        <div style="height: 250px; overflow: scroll;">
+            <a ng-repeat="todo in todos | filter:searched" href={{todo.href}} class="text-center" style="display:block;">{{todo.text}} </a>
         </div>
-
 </div>
+

@@ -61,7 +61,7 @@ h1 {
 
 h2 {
     font-size: 20px;
-    color: #E6CCD6;
+    color: #979C9C;
 }
 
 input {
@@ -69,6 +69,12 @@ input {
     margin: auto 10px;
     border: 1px solid #800033;
 }
+
+/*input:focus {
+    outline: none !important
+    border: 1px solid red;
+    box-shadow: 1px 1px 1px 1px red;
+}*/
 
 form {
   margin: 10px;
@@ -80,11 +86,23 @@ form {
     margin: auto !important;
     padding: 20px;
     font-size: 30px;
+    color: #343642;
+}
+
+a {
+    color: #343642;
 }
 
 nav {
   text-align: center;
   margin: 20px 0;
   padding: 10px;
+}
+
+.btn-info {
+
+  /*.button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);*/
+  background-color: #343642;
+  border-color: #800033;
 }
 
