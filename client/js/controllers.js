@@ -11,7 +11,6 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.search = function() {
   if (!$scope.doneSearch) {
     $scope.doneSearch = true;
-   console.log('inside search')
    todosFactory.getTodos().then(function(data) {
     var sales = data.data.results.Sales
     // console.log(data.data.results.Sales[0].deal.text);
@@ -21,25 +20,6 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
    })
   }
   };
-  // todosFactory.getTodos();
-  // .then(function(data) {
-  //   console.log('this is data', data.data);
-  //   $scope.todos = data.data;
-  // });
-
-  // Save a Todo to the server
-  // $scope.save = function($event) {
-  //   if ($event.which == 13 && $scope.todoInput) {
-
-  //     todosFactory.saveTodo({
-  //       "todo": $scope.todoInput,
-  //       "isCompleted": false
-  //     }).then(function(data) {
-  //       $scope.todos.push(data.data);
-  //     });
-  //     $scope.todoInput = '';
-  //   }
-  // };
 
   //update the status of the Todo
   $scope.updateStatus = function($event, _id, i) {

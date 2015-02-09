@@ -1,5 +1,5 @@
 <div class="container" ng-controller="TodoCtrl">
-    <h1 class="text-center">Apparel</h1>
+    <!-- <h1 class="text-center">Apparel</h1> -->
     <div style="display:block;">
         <div>
            <form name="deals" style="display:block">
@@ -8,7 +8,7 @@
            </form>
         </div>
     </div>
-        <div style="height: 250px; overflow: scroll;">
+        <div style="height: 250px; overflow: scroll;" ng-class="{searchDiv: doneSearch === true}">
             <a ng-repeat="todo in todos | filter:searched" href={{todo.href}} class="text-center" style="display:block;">{{todo.text}} </a>
         </div>
 </div>

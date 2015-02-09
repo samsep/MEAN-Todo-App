@@ -3,6 +3,7 @@
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;
     font-family: calibri;
+    
 }
 .strike span {
     text-decoration: line-through;
@@ -54,44 +55,41 @@
 
 h1 {
     font-family: 'Quicksand',sans-serif;
-    font-size: 32px
+    font-size: 32px;
     text-align: center;
-    color: #800033;
+    color: white;
 }
 
 h2 {
     font-size: 20px;
-    color: #979C9C;
+    color: white;
 }
+
 
 input {
     width: 70% !important;
+    height: 40px;
     margin: auto 10px;
     border: 1px solid #800033;
+    opacity: 0.75;
 }
 
-/*input:focus {
-    outline: none !important
-    border: 1px solid red;
-    box-shadow: 1px 1px 1px 1px red;
-}*/
+input:focus {
+    opacity: 1;
+}
 
 form {
-  margin: 10px;
-  padding: 10px;
+  margin: auto;
   width: 100%;
 }
 
-.toplink{
+.toplink {
     margin: auto !important;
-    padding: 20px;
+    padding: 0 20px 0 20px;
     font-size: 30px;
     color: #343642;
 }
 
-a {
-    color: #343642;
-}
 
 nav {
   text-align: center;
@@ -105,4 +103,54 @@ nav {
   background-color: #343642;
   border-color: #800033;
 }
+
+body {
+ background-image: url('../shopp.jpg.jpg');
+ background-repeat: no-repeat; 
+ background-size : 100% auto;
+}
+
+.agoraland {
+    margin: 100px auto 0px auto;
+    width: 70% !important;
+    text-align: center;
+}
+.agora {
+    font-family: 'Pacifico', cursive;
+    font-size: 90px;
+    font-weight: bold;
+    text-align: center;
+    color: #FF183C;
+/*    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+*/}
+
+.searchLinks {
+    margin: auto;
+    text-align: center;
+    color: #343642;
+}
+
+.description {
+    font-family: 'Quicksand',sans-serif;
+    margin: 20px auto 0px auto;
+    font-size: 20px;
+    text-align: center;
+    color: #343642;
+}
+
+.selectedLink {
+    color: purple;
+}
+
+.searchDiv {
+    margin: 10px auto 10px auto;
+    background-color: white;
+    width: 70%;
+    opacity: 0.8;
+}
+a .searchDiv {
+    opacity: 1;
+    color: #343642;
+}
+
 

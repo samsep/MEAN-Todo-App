@@ -5,6 +5,11 @@ todoApp = angular.module('todoApp', ['ngRoute'])
         templateUrl: '/partials/todo.html',
         controller: 'TodoCtrl'
       })
+      .when('/apparel', {
+        templateUrl: '/partials/todo.html',
+        controller: 'TodoCtrl'
+      })
+
       .when('/electronics', {
         templateUrl: '/partials/electronics.html',
         controller: 'electronicsCtrl'

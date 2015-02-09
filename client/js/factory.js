@@ -6,7 +6,6 @@ todoApp.factory('todosFactory', function($http) {
   var _todoService = {};
  
   _todoService.getTodos = function() {
-    console.log('inside todosFactory')
     return $http.get(urlBase);
   };
 
